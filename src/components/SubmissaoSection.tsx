@@ -4,13 +4,13 @@ import type { RefObject } from "react";
 
 interface SubmissaoSectionProps {
     observacoes: string;
-    password: string;
-    passwordIsValid: boolean;
+    // password: string;
+    // passwordIsValid: boolean;
     isSubmitting: boolean;
     submitStatus: "idle" | "success" | "error";
     inputPassRef: RefObject<HTMLInputElement | null>;
     onObservacoesChange: (value: string) => void;
-    onPasswordChange: (value: string) => void;
+    // onPasswordChange: (value: string) => void;
 }
 
 export function SubmissaoSection({

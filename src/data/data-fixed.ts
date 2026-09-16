@@ -6,7 +6,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Sistema Solar",
         equipe: "G1",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Maria Gabriela Dos Santos Oliveira",
@@ -46,7 +46,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Protótipo de mão robótica para auxílio de pessoas amputadas: tecnologia, inclusão social e direito à acessibilidade",
         equipe: "G2",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Maria Elisa Ferreira Marques",
@@ -86,7 +86,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Cadeira de Pregos e Diferença de Pressões",
         equipe: "G3",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Mariana Veiga Martins",
@@ -116,7 +116,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Olho do vento",
         equipe: "G4",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Byanca Aparecida de Freitas",
@@ -151,7 +151,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Energia em movimento",
         equipe: "G5",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Ana Júlia da Silva Expedito Pains",
@@ -181,7 +181,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "La banda del presepe meccanico",
         equipe: "G6",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Anna Jhulia Torres de Lima",
@@ -221,7 +221,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Palavras secretas e reações químicas",
         equipe: "G7",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Maria Eduarda Tristão Martins",
@@ -261,7 +261,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Empyriano: Entre a Fantasia, a Biologia e a Neurociência",
         equipe: "G8",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Ana Júlia Vitorino B.",
@@ -291,7 +291,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Braço cibernético",
         equipe: "G9",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "João Victor da Silva Souza",
@@ -331,7 +331,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Desenvolvimento de uma máquina de solda caseira e de baixo custo",
         equipe: "G10",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Gustavo de A. A. Silva",
@@ -366,7 +366,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Sinuca sem erro",
         equipe: "G11",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Carlos Eduardo de Souza Garcia",
@@ -406,7 +406,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Ponte de palitos com elevação hidráulica",
         equipe: "G12",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Igor F. Barbosa",
@@ -446,7 +446,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Hidráulica Interativa: Pac-man e Prensa hidráulica",
         equipe: "G13",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Ashley Oliveira Neto",
@@ -476,7 +476,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Boné guardião",
         equipe: "G14",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Aylla Tesch da Silva",
@@ -516,7 +516,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Sistema Robótico de Auxilio a Deficientes Visuais",
         equipe: "G15",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Mariana da F. Martins",
@@ -556,7 +556,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Césio-137: Quando a Ciência se Torna um Perigo",
         equipe: "G16",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Guilherme Cardoso S.",
@@ -596,7 +596,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "A vida pós apocalipse. Como genética, bioquímica e evolução determinam quem sobrevive?",
         equipe: "G17",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Eduardo Antônio da Silva Mendes",
@@ -631,7 +631,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Plataforma Piezoelétrica",
         equipe: "G18",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Lara Amorim Lima",
@@ -671,7 +671,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Gerador de Ondas Estacionárias",
         equipe: "G19",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Davi N. Mendes",
@@ -711,7 +711,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Sonar Ultrassônico",
         equipe: "G20",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Wladyson B. S. Mattos",
@@ -746,7 +746,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "O legado de Dumont",
         equipe: "G21",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Ediane Torricelli D. O.",
@@ -786,7 +786,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Casa Inteligente",
         equipe: "G22",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Davi José Da S. Reis",
@@ -826,7 +826,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Câmara de Wilson",
         equipe: "G23",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Luiz Henrique Silva",
@@ -866,7 +866,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Imersão a Fossa das Marianas",
         equipe: "G24",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Vitória Sá Fortes A. M.",
@@ -906,7 +906,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Destilação no Cotidiano",
         equipe: "G25",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Felipe Miguel da Costa Euphrasio",
@@ -936,7 +936,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "O Experimento de Chernobyl",
         equipe: "G26",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Davi Da Silva Santos",
@@ -971,7 +971,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Máquina Inteligente Para Controle e Distribuição de Alimentos",
         equipe: "G27",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Adrian V. S. Moura",
@@ -1011,7 +1011,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Césio 137: Contato Radioativo e desdobramento",
         equipe: "G28",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Ana Beatriz S. Lourenço",
@@ -1041,7 +1041,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Laboratório de Ciências",
         equipe: "G29",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Emanuele M. da Paz",
@@ -1071,7 +1071,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Povos Originários: Reconhecimento das culturas e tradições esquecidas",
         equipe: "G30",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Maria Vitória Kingma",
@@ -1111,7 +1111,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Bobina de tesla",
         equipe: "G31",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Sergyo Jwnyor da Costa Rodrigues",
@@ -1151,7 +1151,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Sistema Solar em Hologramas: Uma Viagem pelo Universo",
         equipe: "G32",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Alexya B. Guimarães",
@@ -1186,7 +1186,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Viagem ao Mundo Sem Sentidos",
         equipe: "G33",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Alícia Barros de Sá",
@@ -1226,7 +1226,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Gerador de Hidrogênio por Eletrólise – Produção de energia limpa a partir da água",
         equipe: "G34",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Gabriel D. F. Coelho",
@@ -1266,7 +1266,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Historia/ Biografia de Beethoven",
         equipe: "G35",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Arthur R. Mendes",
@@ -1296,7 +1296,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Epidemiologia",
         equipe: "G36",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Otávio de O. Marcelino",
@@ -1326,7 +1326,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Gerador Eletromecânico por Queda de Massa",
         equipe: "G37",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Lucas B. Victorino",
@@ -1366,7 +1366,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Fliperama Hidráulico",
         equipe: "G38",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Nicolas Piter de S. Passos",
@@ -1396,7 +1396,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Motor CA com Imãs Permanentes",
         equipe: "G39",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Igor Lohrran da Silva F.",
@@ -1436,7 +1436,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Labirinto Pneumático",
         equipe: "G40",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Júlia Elias Esteves",
@@ -1471,7 +1471,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Passa ou repassa (Releitura)",
         equipe: "G41",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Richard Garcia Costa",
@@ -1506,7 +1506,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "EcoWatt-Sistema Inteligente de Economia de Energia para Escolas",
         equipe: "G42",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Lucas Henrique da Silva",
@@ -1536,7 +1536,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Câmara de Wilson",
         equipe: "G43",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Luiz Henrique Silva",
@@ -1576,7 +1576,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Álcool e Drogas: interações no Corpo Humano",
         equipe: "G44",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Alicia L. Guilarducci",
@@ -1616,7 +1616,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Esteira Separadora",
         equipe: "G45",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Henrique de S. Martins",
@@ -1651,7 +1651,7 @@ export const EQUIPES: Equipe[] = [
         titulo: "Ondas Sonoras",
         equipe: "G46",
         avaliadores: [],
-        hasObservacoes: true,
+        hasObservacoes: false,
         membrosEquipe: [
             {
                 nome: "Lívia Maria Paiva dos Santos",

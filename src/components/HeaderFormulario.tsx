@@ -14,6 +14,16 @@ export function HeaderFormulario() {
             <h1 className="text-2xl md:text-lg font-bold text-gray-900 mt-2">
                 Formulário de Avaliação
             </h1>
+            <p className="text-sm md:text-xs text-gray-600 mt-1">
+                Se houver algum problema coom o formulário, use o{" "}
+                <a
+                    href="https://forms.gle/o5DUELtXM6gRzaJEA"
+                    className="text-green-600 hover:text-green-700 underline"
+                >
+                    Formulário do Google Forms
+                </a>
+                .
+            </p>
         </div>
     );
 }
