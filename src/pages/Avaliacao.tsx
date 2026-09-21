@@ -78,22 +78,33 @@ export function Avaliacao() {
 
     // Handlers do Avaliador (Sincroniza E-mail <-> Nome)
     const handleNomeSelect = (nome: string) => {
-        setFormData((prev) => ({ ...prev, nomeAvaliador: nome }));
-        const avaliador = AVALIADORES.find((a) => a.nome === nome);
+        const avaliador = AVALIADORES.find(
+            (a) => a.nome.toLocaleLowerCase() === nome.toLocaleLowerCase(),
+        );
+
         if (avaliador) {
             setFormData((prev) => ({
                 ...prev,
+                nomeAvaliador: nome,
                 email: `${avaliador.email}`,
             }));
+        } else {
+            setFormData((prev) => ({ ...prev, nomeAvaliador: nome }));
         }
     };
 
     const handleEmailSelect = (email: string) => {
-        setFormData((prev) => ({ ...prev, email }));
-        const [emailUsuario] = email;
-        const avaliador = AVALIADORES.find((a) => a.email === emailUsuario);
+        const avaliador = AVALIADORES.find(
+            (a) => a.email.toLocaleLowerCase() === email.toLocaleLowerCase(),
+        );
         if (avaliador) {
-            setFormData((prev) => ({ ...prev, nomeAvaliador: avaliador.nome }));
+            setFormData((prev) => ({
+                ...prev,
+                nomeAvaliador: avaliador.nome,
+                email: `${avaliador.email}`,
+            }));
+        } else {
+            setFormData((prev) => ({ ...prev, email }));
         }
     };
 

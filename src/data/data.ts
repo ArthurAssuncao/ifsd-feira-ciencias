@@ -13,7 +13,7 @@ export const AVALIADORES: Avaliador[] = [
         projetosAvaliados: [10, 13, 34, 39, 42],
     },
     {
-        nome: "Antonia Amelia Barbosa",
+        nome: "Antônia Amelia Barbosa",
         email: "antonia.barbosa@ifsudestemg.edu.br",
         projetosAvaliados: [6, 28, 29, 41],
     },
@@ -48,7 +48,7 @@ export const AVALIADORES: Avaliador[] = [
         projetosAvaliados: [13, 17, 31, 37, 40],
     },
     {
-        nome: "Flavia Calvano",
+        nome: "Flávia Calvano",
         email: "flavia.calvano@ifsudestemg.edu.br",
         projetosAvaliados: [1, 7, 26],
     },
@@ -68,7 +68,7 @@ export const AVALIADORES: Avaliador[] = [
         projetosAvaliados: [3, 14, 19, 41],
     },
     {
-        nome: "Marcio De Paiva Delgado",
+        nome: "Márcio De Paiva Delgado",
         email: "marcio.delgado@ifsudestemg.edu.br",
         projetosAvaliados: [4, 16, 35],
     },
@@ -78,7 +78,7 @@ export const AVALIADORES: Avaliador[] = [
         projetosAvaliados: [1, 11, 44],
     },
     {
-        nome: "Patricia Rafaela Otoni Ribeiro",
+        nome: "Patrícia Rafaela Otoni Ribeiro",
         email: "patricia.otoni@ifsudestemg.edu.br",
         projetosAvaliados: [15, 18, 33, 35],
     },
