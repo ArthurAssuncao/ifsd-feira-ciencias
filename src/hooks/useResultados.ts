@@ -132,7 +132,10 @@ export function useResultados() {
                         const parsedData: ResultadoTrabalho[] = Array.from(
                             mapaTrabalhos.entries(),
                         ).map(([titulo, dados]) => {
-                            const mediaGeral = dados.somaNotas / dados.count;
+                            const mediaGeral =
+                                Math.round(
+                                    (dados.somaNotas / dados.count) * 10,
+                                ) / 10;
 
                             return {
                                 titulo,
@@ -142,9 +145,18 @@ export function useResultados() {
                             };
                         });
 
-                        parsedData.sort(
-                            (a, b) => b.notaNumerica - a.notaNumerica,
-                        );
+                        parsedData.sort((a, b) => {
+                            const aArredondada =
+                                Math.round(a.notaNumerica * 10) / 10;
+                            const bArredondada =
+                                Math.round(b.notaNumerica * 10) / 10;
+                            // 1º critério: nota (decrescente)
+                            if (bArredondada !== aArredondada) {
+                                return bArredondada - aArredondada;
+                            }
+                            // 2º critério: título (crescente, alfabético)
+                            return a.titulo.localeCompare(b.titulo, "pt-BR");
+                        });
 
                         setResultados(parsedData);
                         setIsLoading(false);
