@@ -1,4 +1,5 @@
 import { useResultados } from "../hooks/useResultados";
+import { toTitleCase } from "../util/string";
 
 export function Resultados() {
     const { resultados, isLoading, error } = useResultados();
@@ -54,7 +55,7 @@ export function Resultados() {
                                     {index + 1}º
                                 </td>
                                 <td className="py-3 px-4 font-medium text-gray-900">
-                                    {trabalho.titulo}
+                                    {toTitleCase(trabalho.titulo)}
                                 </td>
                                 <td className="py-3 px-4 text-center font-medium text-gray-600">
                                     <span className="bg-gray-100 text-gray-700 px-2.5 py-1 rounded-full text-xs font-semibold">

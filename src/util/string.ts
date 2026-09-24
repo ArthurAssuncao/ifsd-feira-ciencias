@@ -56,12 +56,12 @@ const ignorePrepositionsList = [
 
 export function toTitleCase(
     str: string,
-    ignorePrepositions: boolean = false,
+    ignorePrepositions: boolean = true,
 ): string {
     if (!str) {
         return "";
     }
-    return str
+    const strNew = str
         .toLowerCase() // Convert the entire string to lowercase first
         .split(" ") // Split the string into an array of words
         .map(function (word: string) {
@@ -74,4 +74,5 @@ export function toTitleCase(
             );
         })
         .join(" "); // Join the words back into a single string with spaces
+    return strNew.charAt(0).toUpperCase() + strNew.substring(1); // Capitalize the first letter of the string
 }

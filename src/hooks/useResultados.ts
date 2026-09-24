@@ -3,18 +3,13 @@ import Papa from "papaparse";
 
 export interface ResultadoTrabalho {
     titulo: string;
-    quantidadeAvaliacoes: number; // Nova propriedade
+    quantidadeAvaliacoes: number;
     notaTotal: string;
     notaNumerica: number;
 }
 
 interface RowCSV {
-    "Título do trabalho"?: string;
-    "Domínio do tema"?: string;
-    "Exposição oral e integração da equipe"?: string;
-    "Uso dos recursos empregados e qualidade do material"?: string;
-    "Cumprimento da proposta e organização da equipe"?: string;
-    "Inovação e criatividade"?: string;
+    [key: string]: string | undefined; // Permite buscar chaves dinâmicas com segurança
 }
 
 export function useResultados() {
@@ -37,7 +32,9 @@ export function useResultados() {
 
                 const response = await fetch(url);
                 if (!response.ok) {
-                    throw new Error("Erro ao carregar os dados da planilha.");
+                    throw new Error(
+                        `Erro ao buscar CSV: ${response.status} ${response.statusText}`,
+                    );
                 }
 
                 const csvText = await response.text();
@@ -45,38 +42,73 @@ export function useResultados() {
                 Papa.parse<RowCSV>(csvText, {
                     header: true,
                     skipEmptyLines: true,
+                    // CORREÇÃO CRÍTICA: Remove o caractere invisible \uFEFF (BOM) e espaços dos nomes das colunas
+                    transformHeader: (header) =>
+                        header.trim().replace(/^\uFEFF/, ""),
                     complete: (results) => {
+                        console.log(
+                            "Linhas processadas pelo PapaParse:",
+                            results.data.length,
+                        );
+
                         const parseNota = (valor?: string) => {
                             if (!valor) return 0;
                             return parseFloat(valor.replace(",", ".")) || 0;
                         };
 
-                        // Agrupador por Título do Trabalho
                         const mapaTrabalhos = new Map<
                             string,
                             { somaNotas: number; count: number }
                         >();
 
-                        results.data.forEach((row) => {
-                            const titulo = row["Título do trabalho"]?.trim();
-                            if (!titulo) return;
+                        results.data.forEach((row, index) => {
+                            // Busca flexível do título para evitar problemas de acentuação/caixa alta na coluna
+                            const chaveTitulo = Object.keys(row).find(
+                                (k) =>
+                                    k
+                                        .toLowerCase()
+                                        .includes("título do trabalho") ||
+                                    k
+                                        .toLowerCase()
+                                        .includes("titulo do trabalho"),
+                            );
 
-                            const n1 = parseNota(row["Domínio do tema"]);
+                            const titulo = chaveTitulo
+                                ? row[chaveTitulo]?.trim().toLocaleLowerCase()
+                                : undefined;
+
+                            if (!titulo) {
+                                console.warn(
+                                    `Linha ${index + 1} ignorada (sem título):`,
+                                    row,
+                                );
+                                return;
+                            }
+
+                            // Busca flexível das notas (case-insensitive)
+                            const getValorColuna = (termo: string) => {
+                                const chave = Object.keys(row).find((k) =>
+                                    k
+                                        .toLowerCase()
+                                        .includes(termo.toLowerCase()),
+                                );
+                                return chave ? row[chave] : undefined;
+                            };
+
+                            const n1 = parseNota(
+                                getValorColuna("Domínio do tema"),
+                            );
                             const n2 = parseNota(
-                                row["Exposição oral e integração da equipe"],
+                                getValorColuna("Exposição oral"),
                             );
                             const n3 = parseNota(
-                                row[
-                                    "Uso dos recursos empregados e qualidade do material"
-                                ],
+                                getValorColuna("Uso dos recursos"),
                             );
                             const n4 = parseNota(
-                                row[
-                                    "Cumprimento da proposta e organização da equipe"
-                                ],
+                                getValorColuna("Cumprimento da proposta"),
                             );
                             const n5 = parseNota(
-                                row["Inovação e criatividade"],
+                                getValorColuna("Inovação e criatividade"),
                             );
 
                             const somaIndividual = n1 + n2 + n3 + n4 + n5;
@@ -97,7 +129,6 @@ export function useResultados() {
                             }
                         });
 
-                        // Monta o array final com a média geral do trabalho e a contagem de avaliações
                         const parsedData: ResultadoTrabalho[] = Array.from(
                             mapaTrabalhos.entries(),
                         ).map(([titulo, dados]) => {
@@ -111,7 +142,6 @@ export function useResultados() {
                             };
                         });
 
-                        // Ordena do 1º ao último lugar
                         parsedData.sort(
                             (a, b) => b.notaNumerica - a.notaNumerica,
                         );
@@ -120,6 +150,10 @@ export function useResultados() {
                         setIsLoading(false);
                     },
                     error: (err: Error) => {
+                        console.error(
+                            "Erro ao processar CSV no PapaParse:",
+                            err,
+                        );
                         setError(err.message);
                         setIsLoading(false);
                     },
